@@ -512,7 +512,8 @@ function signOut(){
 }
 
 // ── INIT ──
-async function init(){
+function init(){
+  // Never block on network — show UI immediately from localStorage only
   try{
     const saved=localStorage.getItem('fd_s');
     if(saved){
